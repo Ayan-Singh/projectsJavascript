@@ -1,0 +1,66 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UpdatedRockpaper</title>
+    </head>
+    <body>
+        <button onclick="
+        playGame('Rock')
+
+            ">Rock</button>
+        <button onclick="
+         playGame('Paper')
+        ">Paper</button>
+        <button onclick="
+         playGame('Scissor')
+        ">Scissor</button>
+        <script>
+            function playGame(pMove){
+                const move=pickComputerMove()
+                let result='';
+
+                if(pMove==='Scissor'){
+                    if(move==='Rock'){
+                        result='Lose'
+                    }else if(move === 'Paper'){
+                        result='Win'
+                    }else{
+                        result='Tie'
+                    }
+                }else   if(pMove==='Rock'){
+                    if(move==='Rock'){
+                        result='Tie'
+                    }else if(move === 'Paper'){
+                        result='Lose'
+                    }else{
+                        result='Win'
+                    }
+                }else   if(pMove==='Paper'){
+                    if(move==='Rock'){
+                        result='Win'
+                    }else if(move === 'Paper'){
+                        result='Tie'
+                    }else{
+                        result='Lose'
+                    }
+                }
+                return alert(`Computer choosed ${move} ans You choosed ${pMove} hence you ${result}`)
+            }
+            function pickComputerMove(){
+                let random = Math.random()
+                let computerMove=''
+                if(random >=0 && random < 1/3){
+                    computerMove='Rock'
+                }else if(random >=1/3 && random <2/3){
+                    computerMove='Paper'
+                }else{
+                    computerMove='Scissor'
+                }
+                return computerMove ; 
+            }
+         
+        </script>
+    </body>
+    </html>
