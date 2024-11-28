@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <input class='js-input' type="text" placeholder="Enter your weight">
+    <button onclick="toCalculate()">Calculate</button>
+    <p class="js-calculate"></p>
+</body>
+<script>
+    function toCalculate(){
+    const input=document.querySelector('.js-input')
+    let inputs=Number(input.value)
+    console.log(inputs)
+    inputs=inputs+50;
+    document.querySelector('.js-calculate').innerHTML=`Your weight is ${inputs}`
+    }
+    
+</script>
+</html>
