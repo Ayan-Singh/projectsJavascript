@@ -4,7 +4,9 @@ let scissor=document.querySelector('.js-scissor');
 
 
 
-rock.addEventListener('click',()=> playGame('Rock'))
+rock.addEventListener('click',()=> playGame('Rock'));
+paper.addEventListener('click',()=> playGame('Paper'));
+scissor.addEventListener('click',()=> playGame('Scissor'));
 
 function playGame(move){
     const computerMove = pickComputerMove()
@@ -17,8 +19,24 @@ function playGame(move){
         }else{
             result='Win'; 
         }
+    }else if(move==='Paper'){
+        if(computerMove ==='Rock'){
+            result = 'Win';
+        }else if(computerMove ==='Paper'){
+            result='Tie' ; 
+        }else{
+            result='Lose'; 
+        }
+    }else{
+        if(computerMove ==='Rock'){
+            result = 'Lose';
+        }else if(computerMove ==='Paper'){
+            result='Win' ; 
+        }else{
+            result='Tie'; 
+        }
     }
-    alert(result);
+    alert(`Computer picked ${computerMove} and You picked ${move} hence you ${result}`);
     
 }
 
