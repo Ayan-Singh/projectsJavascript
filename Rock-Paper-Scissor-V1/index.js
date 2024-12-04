@@ -1,6 +1,7 @@
 let rock = document.querySelector('.js-rock');
 let paper = document.querySelector('.js-paper');
 let scissor=document.querySelector('.js-scissor');
+let resultContainer=document.querySelector('.js-result-container');
 
 
 
@@ -51,9 +52,10 @@ function playGame(move){
     }
 
 
-    alert(`Computer picked ${computerMove} and You picked ${move} hence you ${result}
+    let displayScore=(`Computer picked ${computerMove} and You picked ${move} hence you ${result}
         Wins:${score.wins} , Lose:${score.lose} , Tie:${score.tie}
         `);
+    resultContainer.innerHTML=displayScore;
     
 }
 
