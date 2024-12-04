@@ -8,6 +8,12 @@ rock.addEventListener('click',()=> playGame('Rock'));
 paper.addEventListener('click',()=> playGame('Paper'));
 scissor.addEventListener('click',()=> playGame('Scissor'));
 
+let score={
+    wins:0,
+    lose:0,
+    tie:0
+}
+
 function playGame(move){
     const computerMove = pickComputerMove()
     let result='';
@@ -36,7 +42,18 @@ function playGame(move){
             result='Tie'; 
         }
     }
-    alert(`Computer picked ${computerMove} and You picked ${move} hence you ${result}`);
+    if(result==='Win'){
+        score.wins+=1
+    }else if(result==='Lose'){
+        score.lose+=1;
+    }else{
+        score.tie+=1
+    }
+
+
+    alert(`Computer picked ${computerMove} and You picked ${move} hence you ${result}
+        Wins:${score.wins} , Lose:${score.lose} , Tie:${score.tie}
+        `);
     
 }
 
