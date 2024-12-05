@@ -3,8 +3,6 @@ let paper = document.querySelector('.js-paper');
 let scissor=document.querySelector('.js-scissor');
 let resultContainer=document.querySelector('.js-result-container');
 
-
-
 rock.addEventListener('click',()=> playGame('Rock'));
 paper.addEventListener('click',()=> playGame('Paper'));
 scissor.addEventListener('click',()=> playGame('Scissor'));
