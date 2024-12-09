@@ -13,6 +13,7 @@ let score={
     tie:0
 }
 
+
 function playGame(move){
     const computerMove = pickComputerMove()
     let result='';
@@ -56,6 +57,7 @@ function playGame(move){
     resultContainer.innerHTML=displayScore;
     
 }
+
 
 function pickComputerMove(){
     let computerMove =''
